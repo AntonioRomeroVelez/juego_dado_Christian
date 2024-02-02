@@ -1,0 +1,144 @@
+.vof {
+    width: 60px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    text-align-last: center;
+    cursor: pointer;
+    border: none
+}
+
+
+/* media queri para dividir pantalla vertical */
+
+.div-v {
+    border-left: none
+}
+
+@media (min-width: 1200px) {
+    .div-v {
+        border-left: dashed 2px silver
+    }
+}
+
+@media (max-width: 770px) {
+    .div-v {
+        border-left: dashed 2px silver
+    }
+}
+
+
+/* borde izquierda */
+
+.div-i {
+    border-left: none
+}
+
+@media (min-width: 1200px) {
+    .div-i {
+        border-left: dashed 2px silver
+    }
+}
+
+@media (max-width: 770px) {
+    .div-i {
+        border-left: dashed 2px silver
+    }
+}
+
+
+/* borde abajo */
+
+.div-d {
+    border-bottom: none
+}
+
+@media (min-width: 1200px) {
+    .div-d {
+        border-bottom: dashed 2px silver
+    }
+}
+
+@media (max-width: 770px) {
+    .div-d {
+        border-bottom: dashed 2px silver
+    }
+}
+
+
+/* borde arriba */
+
+.div-t {
+    border-top: none
+}
+
+@media (min-width: 1200px) {
+    .div-t {
+        border-top: dashed 2px silver
+    }
+}
+
+@media (max-width: 770px) {
+    .div-t {
+        border-top: dashed 2px silver
+    }
+}
+
+
+/* borde derecha */
+
+.div-d {
+    border-left: none
+}
+
+@media (min-width: 1200px) {
+    .div-d {
+        border-right: dashed 2px silver
+    }
+}
+
+@media (max-width: 770px) {
+    .div-d {
+        border-right: dashed 2px silver
+    }
+}
+
+.funcion {
+    margin: 0px 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.vof:focus {
+    outline: none;
+}
+
+.fin-actividad {
+    pointer-events: none;
+}
+
+.item,
+.itema,
+.itemb,
+.itemc,
+.itemd,
+.iteme,
+.itemf,
+.itemg,
+.itemh,
+.itemi,
+.itemj {
+    color: #f36e21 !important;
+    margin-right: 10px;
+}
+
+.border-retro1 {
+    border: dotted 2px #05538b;
+    border-bottom: none;
+    background-color: #dfdfdf !important;
+    padding: 10px 5px;
+}
+
+.border-retro {
+    border: dotted 2px #05538b;
+}

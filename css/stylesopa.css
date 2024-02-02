@@ -1,0 +1,117 @@
+/**
+* Wordfind.js 0.0.1
+* (c) 2012 Bill, BunKat LLC.
+* Wordfind is freely distributable under the MIT license.
+* For all details and documentation:
+*     http://github.com/bunkat/wordfind
+*/
+
+/**
+* Styles for the puzzle
+*/
+#puzzle {
+    border: 2px solid #58C8BC;
+    padding: 5px;
+    /* float: left; */
+    margin: 4px;
+    border-radius: 10px;
+    display: inline-table;
+}
+
+#puzzle div {
+    /* width: 600px; */
+    margin: 0px;
+}
+
+/* style for each square in the puzzle */
+#puzzle .puzzleSquare {
+    height: 40px;
+    width: 40px;
+    text-transform: uppercase;
+    background-color: white;
+    border: 0;
+    font: 20px sans-serif;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+/* indicates when a square has been selected */
+#puzzle .selected {
+    background-color: #f5a225 !important;
+    border-radius: 5px;
+}
+
+#puzzle .selected:hover {
+    background-color: #48afeb !important;
+    border-radius: 5px;
+    border: solid 1px rgb(0, 0, 0);
+}
+
+/* indicates that the square is part of a word that has been found */
+#puzzle .found {
+    background-color: #58C8BC !important;
+    -webkit-print-color-adjust: exact;
+    color: orangered !important;
+    border-radius: 15px;
+    border: none;
+    font-weight: bolder;
+}
+
+#puzzle .solved {
+    border-radius: 5px;
+    color: white;
+}
+
+/* indicates that all words have been found */
+#puzzle .complete {
+    background-color: silver;
+    border-radius: 5px;
+}
+
+/**
+* Styles for the word list
+*/
+#words {
+    padding-top: 5px;
+    -moz-column-count: 2;
+    -moz-column-gap: 5px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 5px;
+    column-count: 1;
+    /* tamaño de las palabras */
+}
+
+#words ul {
+    list-style-type: disc;
+
+}
+
+#words li {
+    text-align: left;
+    margin: 5px;
+    padding: 5px;
+    font: 1.7rem sans-serif;
+    color: #58C87D;
+    /* font-size: 20px; */
+    border-radius: 5px;
+    /* width: 100px */
+    min-width: 150px;
+    padding-left: 20px;
+}
+
+/* indicates that the word has been found */
+#words .wordFound {
+    color: white;
+    background-color: #7BAC39 !important;
+    -webkit-print-color-adjust: exact;
+    padding-left: 20px;
+}
+
+/**
+* Styles for the button
+*/
+#solve {
+    margin: 5px;
+}

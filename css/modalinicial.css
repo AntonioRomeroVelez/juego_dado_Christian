@@ -1,0 +1,41 @@
+.close {
+    background: #ff0000;
+    
+    line-height: 25px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: 1px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.close:hover {
+    background: #FAAC58;
+    color: #222;
+}
+
+
+.fontt {
+    font-size: 25px;
+    text-align: center;
+}
+
+video.bkg {
+    background-color: #000000;
+}
+
+.bininicial {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: initial;
+    animation-fill-mode: forwards;
+    color: #0077c0 !important;
+    -webkit-print-color-adjust: exact;
+}

@@ -1,0 +1,423 @@
+/******************************************************************************/
+
+
+/******************************************************************************/
+
+
+/******************************************************************************/
+
+
+/******************************************************************************/
+
+
+/*Controla el tamaño de los mensajes de noticias(Actividad, Nota)*/
+
+
+/*BOTONES DE MENU PRINCIPAL*/
+
+/*Controla el tamaño de los botones de menu */
+
+
+.bien1 {
+    box-shadow: 2px 2px 2px 3px rgba(36, 149, 40, 1) !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.mal1 {
+    box-shadow: 2px 2px 2px 3px rgba(226, 95, 56, 1) !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.backnoabierta {
+    background-color: #00e600 !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.no-seleccionable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.itemtitu {
+    color: #f36e21 !important;
+}
+
+
+
+
+/* calificar pintar */
+
+.bien3 {
+    box-shadow: 2px 2px 5px 4px #04a70a !important;
+}
+
+.mal3 {
+    box-shadow: 2px 2px 5px 4px #fc1c0c !important;
+}
+
+.bien4 {
+    -webkit-box-shadow: 0 8px 6px -3px #04a70a !important;
+    -moz-box-shadow: 0 8px 6px -3px #04a70a !important;
+    box-shadow: 0 8px 6px -3px #04a70a !important;
+}
+
+.mal4 {
+    -webkit-box-shadow: 0 8px 6px -3px #fc1c0c !important;
+    -moz-box-shadow: 0 8px 6px -3px #fc1c0c !important;
+    box-shadow: 0 8px 6px -3px #fc1c0c !important;
+}
+
+.bien2 {
+    border: solid 4px #04a70a !important;
+    border-radius: 5px;
+}
+
+.mal2 {
+    border: solid 4px #fc1c0c !important;
+    border-radius: 5px;
+}
+
+.bien {
+    /* background: #b1ffb3 !important;
+    -webkit-print-color-adjust: exact; */
+    background: rgb(209, 237, 204) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: -moz-radial-gradient(circle, rgba(209, 237, 204, 0.7203256302521008) 89%, rgba(37, 130, 3, 0.5606617647058824) 100%) !important;
+    -webkit-print-color-adjust: exact;
+    background: -webkit-radial-gradient(circle, rgba(209, 237, 204, 0.7203256302521008) 89%, rgba(37, 130, 3, 0.5606617647058824) 100%);
+    background: radial-gradient(circle, rgba(209, 237, 204, 0.7203256302521008) 89%, rgba(37, 130, 3, 0.5606617647058824) 100%) !important;
+    -webkit-print-color-adjust: exact;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d1edcc", endColorstr="#258203", GradientType=1);
+}
+
+.mal {
+    /* background: #ffa8a8 !important;
+    -webkit-print-color-adjust: exact; */
+    background: rgb(240, 196, 190) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: -moz-radial-gradient(circle, rgba(240, 196, 190, 0.7203256302521008) 89%, rgba(235, 22, 7, 0.5606617647058824) 100%) !important;
+    -webkit-print-color-adjust: exact;
+    background: -webkit-radial-gradient(circle, rgba(240, 196, 190, 0.7203256302521008) 89%, rgba(235, 22, 7, 0.5606617647058824) 100%) !important;
+    -webkit-print-color-adjust: exact;
+    background: radial-gradient(circle, rgba(240, 196, 190, 0.7203256302521008) 89%, rgba(235, 22, 7, 0.5606617647058824) 100%) !important;
+    -webkit-print-color-adjust: exact;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f0c4be", endColorstr="#eb1607", GradientType=1);
+}
+
+.textoverde {
+    color: #13A981 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-weight: bolder;
+}
+
+.numRosa {
+    color: #BD1B94 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+
+    font-weight: bolder;
+}
+
+.numMorado {
+    color: #52359F !important;
+    -webkit-print-color-adjust: exact;
+
+    font-weight: bolder;
+}
+
+.numCeleste {
+    color: #04AEF0 !important;
+    -webkit-print-color-adjust: exact;
+
+    font-weight: bolder;
+}
+
+.finarrastre {
+    box-shadow: 0px 0px 4px 4px rgba(222, 124, 9, 0.75);
+    -webkit-box-shadow: 0px 0px 4px 4px rgba(222, 124, 9, 0.75);
+    -moz-box-shadow: 0px 0px 4px 4px rgba(222, 124, 9, 0.75);
+}
+
+.numAzul {
+    color: #2A6CBB !important;
+    -webkit-print-color-adjust: exact;
+
+    font-weight: bolder;
+}
+
+.num {
+    color: #2A6CBB !important;
+    -webkit-print-color-adjust: exact;
+
+    font-weight: bolder;
+}
+
+.numNaranja {
+    color: #e75601 !important;
+    -webkit-print-color-adjust: exact;
+
+    font-weight: bolder;
+}
+
+
+
+.espaciar {
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+}
+
+.espaciar1 {
+    border-collapse: separate;
+    border-spacing: 20px 10px;
+}
+
+table.table-bordered {
+    border: solid 2px #36AEE8 !important;
+    text-align: center;
+}
+
+table.table-bordered>thead>tr {
+    border: solid 2px #36AEE8 !important;
+    text-align: center;
+}
+
+table.table-bordered>tbody>tr>td {
+    border: solid 2px #36AEE8 !important;
+    text-align: center;
+}
+
+table.table-bordered>tr>td {
+    border: solid 2px #36AEE8 !important;
+    text-align: center;
+}
+
+table.table-bordered>tr {
+    border: solid 2px #36AEE8 !important;
+    text-align: center;
+}
+
+.fuente1 {
+    /* font-family: "Myriad Pro";
+     */
+    /* padding: 10px;
+	text-align: justify; */
+    font-family: Myriad_Regular;
+    font-size: 2rem;
+
+}
+
+.c-d {
+    text-decoration: underline;
+    font-size: 1.6rem;
+    margin-left: 10px;
+    /* font-weight: bolder; */
+    color: tomato !important
+}
+
+.tachar {
+    text-decoration: line-through;
+}
+
+
+.no-seleccionable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.backnoabierta {
+    background-color: #71d671 !important;
+    -webkit-print-color-adjust: exact;
+}
+
+select {
+    text-align-last: center
+}
+
+.b-t {
+    border-top: solid 1px black;
+}
+
+.b-b {
+    border-bottom: solid 1px black;
+}
+
+.b-l {
+    border-left: solid 1px black;
+}
+
+.b-r {
+    border-right: solid 1px black;
+}
+
+.inputTexto {
+    width: 120px;
+}
+
+
+.caracter1,
+.caracter2,
+.caracter3,
+.caracter4,
+.caracter5,
+.caracter6,
+.caracter7,
+.caracter8,
+.caracter9,
+.textocorto {
+    text-align: center;
+    border: solid 1px silver;
+    border-radius: 5px;
+    outline: none;
+    font-size: 2rem !important;
+    cursor: pointer;
+}
+
+.caracter1,
+.caracter2 {
+    width: 35px;
+    height: 35px;
+}
+
+.caracter3,
+.caracter4 {
+    width: 60px;
+    height: 35px;
+}
+
+.caracter5,
+.caracter6 {
+    width: 80px;
+    height: 35px;
+}
+
+.caracter7,
+.caracter8,
+.caracter9 {
+    width: 110px;
+    height: 35px;
+}
+
+.caracter9 {
+    width: 200px;
+    height: 35px;
+}
+
+/* CAJA DIV PARA ARRASTRE */
+[contenteditable="false"]:empty:not(:focus):before {
+    content: attr(data-text);
+    text-align: center;
+    line-height: 40px;
+    /* padding-top: 25px !important; */
+    color: grey;
+    text-align: center;
+}
+
+/* COLORES BIEN MAL CALIFICACIOES */
+.bien10::before {
+    display: flex;
+    width: 130px;
+    height: 80px;
+    justify-content: center;
+    justify-items: center;
+    content: url('img/ico_bien.png');
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: -80px;
+    z-index: 20;
+}
+
+.mal10::before {
+    display: flex;
+    width: 130px;
+    height: 80px;
+    justify-content: center;
+    justify-items: center;
+    content: url('img/ico_mal.png');
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: -80px;
+    z-index: 20;
+}
+
+/* PARA HACER LITERALES PARA ENCERRAR UNA OPCION */
+.opcEncerrar {
+    border: solid 1px silver;
+    padding: 5px;
+    display: inline-table;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.literalEncerrarOpcion {
+    background-color: rgb(69, 198, 249) !important;
+}
+
+.encerImgOpcion {
+    outline: solid 2px orangered;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+.encerImgOpcion>img {
+    border-radius: 5%;
+}
+
+.encerDivOpcion {
+    outline: solid 2px rgb(14, 122, 223);
+    border-radius: 5px;
+}
+
+.botonCheck {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    border: solid 2px rgb(53, 152, 191);
+    box-shadow: 0px 0px 4px 2px rgba(53, 152, 191, 0.75);
+    -webkit-box-shadow: 0px 0px 4px 2px rgba(53, 152, 191, 0.75);
+    -moz-box-shadow: 0px 0px 4px 2px rgba(53, 152, 191, 0.75);
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.encerDiv {
+    transition: box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.encerDiv:hover {
+    transform: translateX(3px);
+}
+
+/* FIN PARA HACER LITERALES PARA ENCERRAR UNA OPCION */
+
+/* ESTILOS EVALUO MI PROCESO */
+.pintarEvaluoProceso {
+    background-color: rgb(238, 192, 8) !important;
+}
+
+.enunciado_evaluo {
+    background-color: #B7E0EF !important;
+    border-radius: 5px;
+    min-width: 400px;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+.caja_evaluo {
+    cursor: pointer;
+}
+
+/* FIN ESTILOS EVALUO MI PROCESO */

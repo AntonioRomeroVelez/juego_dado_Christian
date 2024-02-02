@@ -1,0 +1,367 @@
+#divJuego {
+  /* background-image: url("img/imgCuadros/img_bg.png"); */
+}
+
+* {
+  user-select: none
+}
+
+.caja {
+  /* td para cada imagen */
+  position: relative;
+  padding: 5px;
+}
+
+.casillero {
+  /* aqui van las imagenes y los numeros de cada casilla */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: solid 2px rgb(0, 172, 72) !important;
+  position: relative;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(7, 43, 90);
+  font-weight: bolder;
+  font-size: 3rem;
+  font-family: cursive;
+  background-color: white;
+  box-shadow: -3px 3px 2px 0px rgba(26, 161, 82, 0.75);
+  -webkit-box-shadow: -3px 3px 2px 0px rgba(26, 161, 82, 0.75);
+  -moz-box-shadow: -3px 3px 2px 0px rgba(26, 161, 82, 0.75);
+}
+
+.textoCasillero {
+  font-size: 1.2rem;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.numeroCasillero {
+  color: rgb(255, 255, 255) !important;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(37, 58, 117);
+}
+
+.divficha {
+  /* dentro de este div van las fichas del juego */
+  position: absolute;
+  top: 5px;
+  padding: 5px;
+  left: 5px;
+  border-radius: 10px;
+  margin: 0px;
+  width: 100px;
+  height: 100px;
+  gap: 8px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.bg-avanza {
+  background-color: rgb(141, 155, 109) !important;
+}
+
+.bg-nada {
+  background-color: rgb(243, 220, 143) !important;
+}
+
+.bg-regresa {
+  background-color: rgb(243, 141, 115) !important;
+}
+
+.imgFicha {
+  z-index: 50;
+  position: relative;
+}
+
+.casillero>span {
+  /* span para en numero de avanzar */
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  font-size: 1.5rem;
+  font-family: cursive;
+  width: 100px;
+  font-weight: bolder;
+  display: inline-flex;
+  color: aliceblue !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.casillaInicio {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.casillaCentro {
+  border-radius: 0px;
+}
+
+.casillaDerechaArriba {
+  border-radius: 0px 10px 0px 0px;
+}
+
+.casillaDerechaAbajo {
+  border-radius: 0px 0px 10px 0px;
+}
+
+.casillaIzquierdaArriba {
+  border-radius: 10px 0px 0px 0px;
+}
+
+.casillaIzquierdaAbajo {
+  border-radius: 0px 0px 0px 10px;
+}
+
+.modal-njugadores {
+  background-color: cadetblue;
+  padding: 10px;
+  border: solid 3px rgb(247, 169, 0);
+}
+
+.modal-njugadores>h4 {
+  font-size: 3rem;
+  padding: 10px;
+  color: white;
+  font-weight: bolder;
+}
+
+.btn-jugador {
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+  background-color: rgb(243, 230, 205);
+  border: solid 1px rgb(140, 101, 16);
+}
+
+.textRed {
+  color: red !important;
+}
+
+.textPurple {
+  color: rgb(92, 3, 130) !important;
+}
+
+/* ESTILOS RELOJ */
+.cronometro {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+#contador {
+  font-size: 2em;
+  border-radius: 10px;
+  background-color: rgb(58, 118, 146);
+  padding: 0px 10px;
+  color: white;
+  border: solid 2px rgb(68, 95, 143);
+}
+
+.buttonReloj {
+  font-size: 1em;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* FIN ESTILOS RELOJ */
+
+.cajaPregunta {
+  border: solid 2px rgb(71, 103, 127);
+  padding: 10px;
+  background-color: aliceblue;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.modalPreguntas {
+  max-width: 600px;
+  background-color: cadetblue;
+  padding: 10px;
+  border: solid 3px rgb(247, 169, 0);
+  border-radius: 10px;
+}
+
+.desabilitar {
+  pointer-events: none;
+}
+
+.habilitar {
+  pointer-events: auto;
+}
+
+.opcionPre {
+  display: inline-flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: solid 1px rgb(253, 169, 109);
+  cursor: pointer;
+  background-color: #ffffff;
+  /* Color de fondo pastel */
+  transition: color 0.3s;
+  /* Transición solo para el color del texto */
+}
+
+/* Aplicar la animación al hacer hover */
+.opcionPre:hover {
+  color: orangered;
+  border: solid 1px rgb(27, 69, 115);
+}
+
+
+
+
+
+@keyframes bounceIn {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.2);
+  }
+
+  60% {
+    transform: scale(1.1);
+    background-color: antiquewhite !important;
+  }
+}
+
+.pintarOpcio {
+  background-color: rgb(243, 188, 94) !important;
+  color: rgb(0, 0, 0) !important;
+  border: solid 2px skyblue;
+}
+
+.bien10 {
+  box-shadow: -1px 13px 5px 0px rgba(90, 181, 115, 0.75) !important;
+  -webkit-box-shadow: -1px 13px 5px 0px rgba(90, 181, 115, 0.75) !important;
+  -moz-box-shadow: -1px 13px 5px 0px rgba(90, 181, 115, 0.75) !important;
+}
+
+.mal10 {
+  box-shadow: -1px 13px 5px 0px rgba(247, 37, 50, 0.75) !important;
+  -webkit-box-shadow: -1px 13px 5px 0px rgba(247, 37, 50, 0.75) !important;
+  -moz-box-shadow: -1px 13px 5px 0px rgba(247, 37, 50, 0.75) !important;
+}
+
+.modalRetrocede {
+  max-width: 600px;
+  background-color: cadetblue;
+  padding: 10px;
+  border: solid 3px rgb(247, 169, 0);
+  border-radius: 10px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.NombreEquipo {
+  font-size: 1.5rem;
+  color: rgb(114, 102, 102)
+}
+
+@keyframes moverIzquierdaDerecha {
+  0% {
+    transform: translateX(0px);
+  }
+
+  30% {
+    transform: translateX(80px);
+  }
+
+  65% {
+    transform: translateX(-80px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.imagen-ganar {
+  animation: moverIzquierdaDerecha 6s linear infinite;
+}
+
+.box-players {
+
+  position: absolute;
+  transform: translateY(-110%);
+  transition: transform 0.4s ease;
+  /* Transición suave durante 0.4 segundos */
+}
+
+.box-players.mostrar {
+  position: absolute;
+  transform: translateY(0);
+  /* Muestra el elemento */
+}
+
+.ocultar-div-dado {
+  animation-name: ocultarIzquierda;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ocultarIzquierda {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.NombreEquipo {
+  font-size: 1rem;
+  color: rgb(114, 102, 102)
+}
+
+.mostrar-div-dado {
+  animation-name: mostrarDerecha;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mostrarDerecha {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

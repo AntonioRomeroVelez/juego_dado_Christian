@@ -1,0 +1,97 @@
+/* CSS para modelar el crucigrama */
+.casillaCrucigrama {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: none;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    cursor: pointer;
+    border: solid 1px rgb(26, 24, 24) !important
+}
+
+.casillaCrucigrama:focus {
+    border: solid 1px salmon;
+    outline: none;
+}
+
+.numCrucigrama {
+    background-color: #4CC62D !important;
+    padding: 5px;
+    color: black !important;
+    border-radius: 30%;
+    font-weight: bold;
+}
+
+#crossword {
+    border-collapse: collapse;
+}
+
+#crossword td {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    /* font-weight: bold; */
+    font-family: Arial, sans-serif;
+}
+
+.crossword>tbody>tr>td {
+    background-color: transparent !important
+}
+
+
+.crossword>tbody>tr {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 35px !important;
+}
+
+.horizontal {
+    background-color: #ddd;
+}
+
+.vertical {
+    background-color: #eee;
+}
+
+td>span {
+    color: #000;
+    font-size: 18px;
+}
+
+.square {
+    margin: 0;
+    padding: 0;
+    font: 20px Calibri;
+    width: 35px;
+    height: 35px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.letter {
+    background-color: rgb(255, 255, 255);
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.clueReadOnly {
+    border: 0;
+    outline: 0;
+    color: #303030 !important;
+    background: none;
+}

@@ -1,0 +1,428 @@
+.panel-body {
+    /* background-color: #f2fafc !important; */
+}
+
+
+.nota-abierta {
+    background-color: white;
+}
+
+.bg-Robotica {
+    width: 100%;
+    background-color: #A18BCC !important;
+    box-shadow: 0px 1px 5px 0px #A18BCC !important;
+    -webkit-print-color-adjust: exact;
+    -webkit-box-shadow: 0px 1px 5px 0px #A18BCC !important;
+    -webkit-print-color-adjust: exact;
+    -moz-box-shadow: 0px 1px 5px 0px #A18BCC !important;
+    -webkit-print-color-adjust: exact;
+    border-bottom: solid 1px #A18BCC;
+}
+
+.border-Robotica {
+    border: 2px solid #A18BCC !important;
+    -webkit-print-color-adjust: exact;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.bg-Robotica-refuerzo {
+    width: 100%;
+    background-color: #7C82C1 !important;
+    box-shadow: 0px 1px 5px 0px #202766 !important;
+    -webkit-print-color-adjust: exact;
+    -webkit-box-shadow: 0px 1px 5px 0px #7C82C1 !important;
+    -webkit-print-color-adjust: exact;
+    -moz-box-shadow: 0px 1px 5px 0px #7C82C1 !important;
+    -webkit-print-color-adjust: exact;
+    border-bottom: solid 1px #7C82C1;
+}
+
+.border-Robotica-refuerzo {
+    border: 2px solid #3D47A4 !important;
+    -webkit-print-color-adjust: exact;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.bg-Robotica-presaberes {
+    width: 100%;
+    background-color: #ffd650 !important;
+    box-shadow: 0px 1px 5px 0px #F58612 !important;
+    -webkit-print-color-adjust: exact;
+    -webkit-box-shadow: 0px 1px 5px 0px #eccdac !important;
+    -webkit-print-color-adjust: exact;
+    -moz-box-shadow: 0px 1px 5px 0px #eccdac !important;
+    -webkit-print-color-adjust: exact;
+    border-bottom: solid 1px #eccdac;
+}
+
+.border-Robotica-presaberes {
+    border: 2px solid #F58612 !important;
+    -webkit-print-color-adjust: exact;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.bg-Robotica>div {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.tabla-evaluo-titulo {
+    background-color: #9D35A0 !important;
+    color: white !important;
+    border-radius: 5px 5px 0px 0px;
+    padding: 5px;
+    text-align: center;
+    margin: 0px 2px;
+}
+
+.tabla-evaluo-enunciado {
+    background-color: #D7AEDC !important;
+    border-radius: 5px 5px 0px 0px;
+    padding: 5px;
+}
+
+.cajaevaluo {
+    width: 100%;
+    min-height: 40px;
+    border: solid 1px silver;
+    cursor: pointer;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    color: rgb(158, 44, 3) !important;
+    font-weight: bolder;
+    font-size: 2.7rem;
+    font-family: sans-serif;
+}
+
+
+
+.divbox {
+    display: inline-table;
+    padding: 10px;
+    cursor: pointer;
+    border: solid 1px rgb(9, 131, 212);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.selectbox1 {
+    border: solid 1px silver;
+    text-align: center;
+
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 5px;
+}
+
+textarea {
+    overflow: hidden;
+    resize: none;
+}
+
+.respuesta {
+    color: orangered !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-right: 5px;
+    font-size: 1.7rem;
+}
+
+
+.color-sel {
+    transform: scale(1.2);
+    border-radius: 50% !important;
+    box-shadow: 2px 2px #525252 !important;
+}
+
+.b-tabla {
+    border: solid 1px grey !important
+}
+
+.b-bajo {
+    border-bottom: solid 2px #2a63a8 !important
+}
+
+.b-b {
+    border-bottom: solid 1px black !important;
+    padding-bottom: 0px;
+}
+
+.b-t {
+    border-top: solid 1px black !important;
+    padding-top: 0px;
+}
+
+.titulotabla {
+    padding: 5px;
+    font-size: 22px;
+    color: white !important;
+}
+
+.no-arrow {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.no-arrow::-ms-expand {
+    display: none;
+}
+
+.puntajeCalificacion {
+    font-family: cursive;
+    color: rgb(5, 99, 143) !important;
+    font-size: 1.7rem;
+}
+
+.dragpg,
+.drag1,
+.drag2,
+.drag3,
+.drag4,
+.drag5,
+.drag6,
+.drag7,
+.drag8,
+.drag9,
+.drag10,
+.drag11,
+.drag12 {
+    cursor: move;
+    mix-blend-mode: multiply;
+    z-index: 40;
+}
+
+@font-face {
+    font-family: "MYRIADPRO-BOLD";
+    src: url("/actividades/fonts/Beyond-Mars.otf");
+}
+
+/* .Robotica {
+    font-family: "MYRIADPRO-BOLD";
+    font-size: 3rem;
+    color: #4FBF54 !important;
+    float: right;
+    padding: 5px;
+    font-weight: bold;
+    background-color: #34c2b8 !important;
+    border-radius: 5px;
+} */
+
+.cuadrocolor {
+    border-radius: 10%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 2px;
+    width: 30px;
+    height: 30px;
+    display: inline-table;
+}
+
+.literal {
+    color: rgb(8, 152, 219) !important
+}
+
+/******
+iconos de ayuda
+****/
+.movermano-izq {
+    -webkit-animation: ayudamano-izq 4s infinite;
+}
+
+@-webkit-keyframes ayudamano-izq {
+    0% {
+        /* -webkit-transform: rotateX(50deg); */
+        transform: translate(20px, 0px);
+    }
+
+    25% {
+        /* -webkit-transform: rotateX(-50deg); */
+        transform: translate(10px, 0px);
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        /* -webkit-transform: rotateX(50deg); */
+        transform: translate(20px, 0px);
+    }
+
+    75% {
+        /* -webkit-transform: rotateX(-50deg); */
+        transform: translate(10px, 0px);
+        transform: rotate(-10deg);
+
+    }
+
+    100% {
+        /* -webkit-transform: rotateX(50deg); */
+        transform: translate(20px, 0px);
+
+    }
+}
+
+.shadow-drop-center {
+    -webkit-animation: shadow-drop-center 1s infinite alternate both;
+    animation: shadow-drop-center 1s infinite alternate both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-3-29 16:30:1
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shadow-drop-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes shadow-drop-center {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 10px 0px rgb(1, 161, 127);
+        box-shadow: 0 0 10px 0px rgb(1, 161, 127);
+    }
+}
+
+@keyframes shadow-drop-center {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 10px 0px rgb(1, 161, 127);
+        box-shadow: 0 0 10px 0px rgb(1, 161, 127);
+    }
+}
+
+.titulo {
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+
+.titulotema {
+    font-size: 2.5rem;
+    color: white !important;
+    background-color: #00ABCF !important;
+    padding: 0px 10px;
+    border-radius: 0px 0px 15px 15px;
+    display: inline-table;
+    padding: 1px 10px;
+    margin: 0px 10px;
+    text-align: center;
+}
+
+.titulotema>span {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: white !important
+}
+
+.titulonombretema {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: white !important;
+    font-weight: bolder;
+}
+
+
+.textblue {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: #04ADEF !important;
+}
+
+/* .tacharCaja::before {
+    position: absolute;
+    color: orangered !important;
+    -webkit-print-color-adjust: exact;
+    content: "X";
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px !important;
+} */
+
+
+.form-control2 {
+    font-size: 1.7rem;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control2:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.form-control2::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.form-control2:-ms-input-placeholder {
+    color: #999;
+}
+
+.form-control2::-webkit-input-placeholder {
+    color: #999;
+}
+
+.form-control2::-ms-expand {
+    background-color: transparent;
+    border: 0;
+}
+
+.form-control2[disabled],
+.form-control2[readonly],
+fieldset[disabled] .form-control2 {
+    background-color: #eee;
+    opacity: 1;
+}
+
+.form-control2[disabled],
+fieldset[disabled] .form-control2 {
+    cursor: not-allowed;
+}
+
+textarea.form-control2 {
+    height: auto;
+}
+
+.d-i-f {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

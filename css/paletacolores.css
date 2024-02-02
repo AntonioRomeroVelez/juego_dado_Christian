@@ -1,0 +1,15 @@
+/* estilos paleta colore  */
+
+
+/* adicional van con estas clases 
+   row modal-colores info
+    */
+
+.paletacolores {
+    display: inline-table;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 5px;
+}

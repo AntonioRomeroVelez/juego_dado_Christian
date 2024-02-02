@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Juego Patito Ortográfico</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Bootstrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!--Animaciones-->
+    <link href="css/animate.css" rel="stylesheet" />
+    <!--Css propio del proyecto-->
+    <link href="css/customa.css" rel="stylesheet" />
+    <link href="css/fraccion.css" rel="stylesheet" />
+    <link href="css/aanimacion.css" rel="stylesheet" />
+    <link href="css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="css/Comprendoa.css" rel="stylesheet" />
+    <link href="css/hover.css" rel="stylesheet" media="all" />
+    <link href="css/index.css" rel="stylesheet" media="all" />
+    <link href="css/magic.css" rel="stylesheet" media="all" />
+    <script src="js/anijs.js"></script>
+    <script src="js/anijs-min.js"></script>
+
+    <link href="css/animate.min2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css" />
+    <!-- <link href="css/estilosjuego.css" rel="stylesheet" media="all"> -->
+  </head>
+  <style>
+    @font-face {
+      font-family: "MiFuente";
+      src: url("fonts/comic.ttf") format("woff2"),
+        /* Formato WOFF2 para navegadores modernos */ url("fonts/comicbd.ttf")
+          format("woff");
+      /* Formato WOFF para compatibilidad con versiones anteriores */
+      /* Puedes agregar otros formatos de fuente aquí si lo deseas */
+    }
+
+    body {
+      font-family: "MiFuente", sans-serif;
+      font-size: 2.5rem;
+    }
+
+    @keyframes rgirarMano {
+      0% {
+        transform: rotate(30deg) translateX(0) scale(1);
+      }
+
+      50% {
+        transform: rotate(-10deg) translateX(-10px) scale(1.2);
+      }
+
+      100% {
+        transform: rotate(30deg) translateX(0) scale(1);
+      }
+    }
+
+    .imagen-animada {
+      animation: rgirarMano 2s ease infinite;
+    }
+  </style>
+
+  <body>
+    <!-- <nav class="navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button
+          type="button"
+          class="navbar-toggle"
+          data-toggle="collapse"
+          data-target=".navbar-collapse"
+        >
+          <span class="icon-bar"></span> <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="navBtnAyuda">
+            <button
+              class="btn button btnHelp mytooltip hvr-icon-pop"
+              data-info="Mostrar ayuda de la actividad"
+              onclick="mostrar_ayuda()"
+            >
+              <span
+                class="fa hvr-icon glyphicon glyphicon-question-sign"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </li>
+          <li class="navBtnGuardar">
+            <button
+              class="btn button button_1 btnGuardar mytooltip hvr-icon-pop"
+              data-info="Guardar en local"
+              onclick="$('#myModal').modal('show')"
+            >
+              <span
+                class="fa hvr-icon glyphicon glyphicon-floppy-save"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </li>
+          <li class="navBtnIniciar">
+            <button
+              class="btn button button_4 btnIniciar mytooltip hvr-icon-pop"
+              data-info="Iniciar"
+              style="display: none !important"
+            >
+              <span
+                class="fa hvr-icon glyphicon glyphicon-play"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </li>
+          <li class="navBtnRepetir">
+            <button
+              class="btn button button_2 btnRepetir mytooltip hvr-icon-pop"
+              data-info="Repetir"
+              onclick="location.reload()"
+            >
+              <span
+                class="fa hvr-icon glyphicon glyphicon-refresh"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </li>
+          <li class="navBtnCalificar">
+            <button
+              class="btn button button_3 btnCalificar mytooltip hvr-icon-pop"
+              data-info="Calificar / Comprobar"
+              id="bt_comprobar"
+              onclick="total()"
+            >
+              <span
+                class="fa hvr-icon glyphicon glyphicon-check"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </li>
+          <li class="navBtnFunciones">
+            <button
+              class="btn button alertinicial button_7 mytooltip"
+              data-info="Funcionamiento de botones"
+              onclick="alerta_ayuda_inicio()"
+            >
+              <span
+                id="full_ico"
+                class="glyphicon glyphicon-info-sign"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+    <div
+      class="panel"
+      id="activity"
+      align="center"
+      style="
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: multiply;
+        padding-top: 30px;
+      "
+    >
+      <!-- <div style="height:120px;border:solid 1px red;">
+      <div style="display: inline-flex;  padding: 10px;  border-radius: 10px;  align-items: center;  justify-content: center;
+              position: fixed;z-index: 990;">
+        <div class="lanza-dado">
+          <span><img src="img/dados/d1.png" class="animate__animated animate__bounce animate__infinite" id="imgDado"
+              onclick="girar();" style="width: 100px; cursor: pointer" /></span>
+        </div>
+        <div id="fichasJugadores" style="display: inline-flex; gap: 10px;flex-direction: column;"></div>
+      </div>
+    </div> -->
+
+      <div
+        style="
+          display: table;
+          position: relative;
+          background-image: url('img/imgCuadros/img_bg.png');
+        "
+        id="cajaTabla"
+      >
+        <table>
+          <tr>
+            <td
+              rowspan="3"
+              colspan="2"
+              style="position: relative; z-index: 100"
+            >
+              <div
+                id="div-modal-dado"
+                style="position: fixed; width: 220px; top: 40px"
+              >
+                <div class="modal-content modal-njugadores">
+                  <h4 class="modal-title">
+                    Es el turno <br />
+                    del equipo <span id="turnoJugador"></span>
+                  </h4>
+                  <div
+                    class="modal-body"
+                    style="
+                      display: inline-flex;
+                      gap: 10px;
+                      margin-left: 15px;
+                      flex-direction: column;
+                    "
+                  >
+                    <div
+                      class="lanza-dado"
+                      style="
+                        display: inline-flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                      "
+                    >
+                      <div
+                        style="
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                        "
+                      >
+                        <img
+                          src="img/dados/d1.png"
+                          class="animate__animated animate__pulse animate__infinite"
+                          id="imgDado"
+                          onclick="girar();"
+                          data-dismiss="modal"
+                          style="
+                            width: 100px;
+                            cursor: pointer;
+                            margin-right: 10px;
+                          "
+                        />
+                        <img
+                          src="img/ico_ayuda.png"
+                          class="imagen-animada"
+                          style="display: inline-table"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      id="btn-Modal-Jugadores"
+                      onclick="MostrarOcultarJugadores()"
+                    ></button>
+                  </div>
+                </div>
+                <div
+                  class="modal-content modal-njugadores box-players"
+                  id="caja-Jugadores"
+                  style="z-index: -1"
+                >
+                  <div
+                    style="
+                      display: inline-flex;
+                      gap: 10px;
+                      margin-left: 15px;
+                      flex-direction: column;
+                    "
+                  >
+                    <div
+                      id="fichasJugadores"
+                      style="
+                        display: inline-flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: left;
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="caja">
+              <div style="border: none">
+                <div class="divficha" id="posicionDado0"></div>
+                <div class="casillero bg-nada">Salida</div>
+              </div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado1"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado2"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado3"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado4"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="caja">
+              <div class="divficha" id="posicionDado9"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado8"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado7"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado6"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado5"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="caja">
+              <div class="divficha" id="posicionDado10"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado11"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado12"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado13"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado14"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="caja">
+              <div class="divficha" id="posicionDado21"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado20"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado19"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado18"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado17"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado16"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado15"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="caja">
+              <div class="divficha" id="posicionDado22"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado23"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado24"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado25"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado26"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado27"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado28"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="caja">
+              <div class="divficha" id="posicionDado35"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado34"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado33"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado32"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado31"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado30"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado29"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="caja">
+              <div class="divficha" id="posicionDado36"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado37"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado38"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado39"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado40"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado41"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado42"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="caja">
+              <div class="divficha" id="posicionDado49"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado48"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado47"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado46"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado45"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado44"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado43"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="caja">
+              <div class="divficha" id="posicionDado50"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado51"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado52"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado53"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado54"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado55"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado56"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="caja" colspan="2">
+              <div style="border: none">
+                <div
+                  class="divficha"
+                  id="posicionDado62"
+                  style="width: 100%"
+                ></div>
+                <div class="casillero bg-nada" style="width: 100%">Llegada</div>
+              </div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado61"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado60"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado59"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado58"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado57"></div>
+            </td>
+            <td class="caja">
+              <div class="divficha" id="posicionDado56"></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- Modal Numero de Jugadores-->
+    <div
+      class="modal fade animated pulse"
+      id="modal-numjugadores"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-md" align="center">
+        <!-- Modal content-->
+        <div
+          class="modal-content modal-njugadores"
+          style="font-family: MontRegular"
+        >
+          <h4 class="modal-title">Selecciona el número de Jugadores</h4>
+          <div class="modal-body">
+            <button
+              class="btn-jugador btn btn-warning"
+              style="margin: 10px; font-size: 2rem"
+              onclick="guardar_NumJugadores(2)"
+              data-anijs="if: click, do: bounceIn animated"
+            >
+              2 Jugadores
+            </button>
+            <button
+              class="btn-jugador btn btn-warning"
+              style="margin: 10px; font-size: 2rem"
+              onclick="guardar_NumJugadores(3)"
+              data-anijs="if: click, do: bounceIn animated"
+            >
+              3 Jugadores
+            </button>
+            <button
+              class="btn-jugador btn btn-warning"
+              style="margin: 10px; font-size: 2rem"
+              onclick="guardar_NumJugadores(4);"
+              data-anijs="if: click, do: bounceIn animated"
+            >
+              4 Jugadores
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Dado-->
+    <div class="modal fade animated pulse" id="modal-dado" role="dialog">
+      <div class="modal-dialog modal-md" align="center">
+        <!-- Modal content-->
+        <div
+          class="modal-content modal-njugadores"
+          style="font-family: MontRegular"
+        >
+          <!-- <h4 class="modal-title">El jugador <span id="jugadorActual" class="numerosPos"></span> avanza <span id="caraDado" class="numerosPos"></span> posiciones.</h4> -->
+          <h4 class="modal-title">
+            Jugador <span id="jugadorActual" class="numerosPos"></span>
+          </h4>
+          <div class="modal-body" style="min-height: 250px">
+            <div id="imgDadoGiro"></div>
+            <br /><br />
+            <div id="valorDadoLanzado"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Retrocede-->
+    <div class="modal fade animated pulse" id="modal-Retrocede" role="dialog">
+      <div class="modal-dialog modal-md" align="center">
+        <!-- Modal content-->
+        <div
+          class="modal-content modal-njugadores"
+          style="font-family: MontRegular"
+        >
+          <!-- <h4 class="modal-title">El jugador <span id="jugadorActual" class="numerosPos"></span> avanza <span id="caraDado" class="numerosPos"></span> posiciones.</h4> -->
+          <h4 class="modal-title">
+            JUGADOR <span class="jugadorActual" class="numerosPos"></span>
+          </h4>
+          <div class="modal-body" style="min-height: 250px">
+            <div>
+              <span class="texto"></span>
+              <div id="btn-AvanzaRetrocede"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Pregunta-->
+    <div class="modal fade animated pulse" id="modal-pregunta" role="dialog">
+      <div class="modal-dialog modal-lg" align="center">
+        <!-- Modal content-->
+        <div class="modal-content modal-pregunta">
+          <div
+            class="modal-body table-responsive"
+            style="font-family: MontRegular"
+            style="background-color: transparent !important"
+          >
+            <div style="color: rgb(45, 49, 85); font-size: 4rem">
+              Pregunta para el jugador <span id="jugador"></span>
+            </div>
+            <div>
+              <span>
+                <img src="img/imgCuadros/imgReloj.png" alt="" />
+                Tiempo para cumplir el reto: <span id="mostrarSegundos"></span>
+              </span>
+              <div class="cronometro">
+                <div id="contador">00:00</div>
+                <div id="idCronoIni"></div>
+              </div>
+            </div>
+            <div class="cajaPregunta">
+              <h3 id="imgPreguntaActual"></h3>
+              <div id="opcionMultiple"></div>
+            </div>
+            <div id="MensajePregunta"></div>
+            <div class="btn-retos">
+              <button
+                class="btn btn-success"
+                style="font-size: 2rem"
+                onclick="retoCumplido()"
+              >
+                Reto cumplido
+              </button>
+              <button
+                class="btn btn-danger"
+                style="font-size: 2rem"
+                onclick="retoNoCumplido()"
+                data-dismiss="modal"
+              >
+                No cumplido
+              </button>
+              <!-- <button class="btn btn-jugar" id="btnSiguienteMayor" data-dismiss="modal">Siguiente</button> -->
+            </div>
+            <div class="btn-terminar_varias">
+              <button
+                class="btn btn-success"
+                style="font-size: 2rem"
+                onclick="validarVarios(triviaRespuestasVarias,triviaRespuestasVariasCorrectas)"
+              >
+                Hecho
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Reto No Cumplido-->
+    <div
+      class="modal fade animated pulse"
+      id="modal-RetoNoCumplido"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-lg" align="center">
+        <div class="modal-content modal-RetoNoCumplido" style="width: 400px">
+          <div
+            class="modal-body table-responsive"
+            style="font-family: MontRegular"
+          >
+            <h3>No cumpliste el reto, no avanzas</h3>
+            <div>
+              <br />
+              <button
+                class="btn btn-danger"
+                data-dismiss="modal"
+                style="font-size: 2rem"
+                onclick="noAvanzar()"
+              >
+                Siguiente Jugador
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade animated pulse" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              onclick="$('#myModal').modal('hide')"
+            >
+              &times;
+            </button>
+            <h4 class="modal-title">Guarda esta actividad en tu computadora</h4>
+          </div>
+          <div class="modal-body">
+            <form id="modal_form" class="form-horizontal">
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label id="lbl_nombre" for="txtAlumno">Alumno: </label>
+                </div>
+                <div class="col-sm-10">
+                  <!--el input para ingresar el nombre del alumno debe se txt_alumno-->
+                  <input
+                    type="text"
+                    class="form-control nombre"
+                    id="txtAlumno"
+                    placeholder="Ingrese tu nombre"
+                  />
+                  <div
+                    class="alert alert-danger display-none"
+                    id="txtAlumnoAlert"
+                    role="alert"
+                  >
+                    <button
+                      type="button"
+                      class="close"
+                      onclick="o$('#myModal').modal('hide')"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <span
+                      class="glyphicon glyphicon-info-sign error-color"
+                      aria-hidden="true"
+                    ></span>
+                    Debes ingresar tu nombre
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              onclick="save_open_activity_to_local('txtAlumno')"
+            >
+              Guardar
+            </button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal  #modal-Ganaste un turno"-->
+    <div class="modal fade animated pulse" id="modal-Ganaste" role="dialog">
+      <div class="modal-dialog modal-md" align="center">
+        <!-- Modal content-->
+        <div class="modal-content modal-njugadores">
+          <!-- <h4 class="modal-title">El jugador <span id="jugadorActual" class="numerosPos"></span> avanza <span id="caraDado" class="numerosPos"></span> posiciones.</h4> -->
+          <h4 class="modal-title" style="color: rgb(29, 73, 74)">
+            EL EQUIPO <span id="jugadorGanador" class="numerosPos"></span> ES EL
+            GANADOR
+          </h4>
+          <div class="modal-body" style="min-height: 250px">
+            <div
+              style="
+                font-size: 3rem;
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <div
+                style="
+                  position: relative;
+                  display: table;
+                  width: 300px;
+                  height: 300px;
+                  font-family: MiFuente;
+                "
+              >
+                <img
+                  src="img/imgCuadros/felicidades_1.gif"
+                  alt=""
+                  style="width: 300px"
+                />
+                <img
+                  src="img/luces_1.gif"
+                  alt=""
+                  style="
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 300px;
+                    height: 300px;
+                  "
+                />
+                <img
+                  src="img/luces_3.gif"
+                  alt=""
+                  style="
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 300px;
+                    height: 300px;
+                  "
+                />
+                <img
+                  src="img/imgCuadros/ganaste_1.png"
+                  class="imagen-ganar"
+                  alt=""
+                  style="position: absolute; top: 100px; left: 80px"
+                />
+              </div>
+              <button
+                class="btn btn-success botones_click"
+                data-dismiss="modal"
+                onclick="location.reload()"
+                style="display: block; font-size: 3rem"
+              >
+                Volver a jugar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL NumeroExacto -->
+    <div
+      class="modal fade animated pulse"
+      id="modal-NumeroExacto"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-lg" align="center">
+        <div class="modal-content modal-NumeroExacto" style="width: 400px">
+          <div
+            class="modal-body table-responsive"
+            style="font-family: MontRegular"
+          >
+            <h3>JUGADOR NÚMERO <span id="jugadorExacto"></span></h3>
+            <h2>
+              ¡DEBES SACAR EL NÚMERO <span id="numExacto"></span> PARA PODER
+              GANAR!
+            </h2>
+            <div>
+              <br />
+              <button
+                class="btn btn-danger"
+                data-dismiss="modal"
+                style="font-size: 2rem"
+                onclick="turnoSiguienteJugador()"
+              >
+                SIGUIENTE JUGADOR
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Guardar PDF-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.ui.touch-punch.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jQuery_UI_Touch_Punch_0.2.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--generador de pdf-->
+    <script src="js/html2pdf/html2pdf.bundle.min.js"></script>
+    <script src="js/animate.css.min.js"></script>
+    <script src="js/jquery.animate.css.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.all.js"></script>
+    <script src="js/sweetalert2@9.js"></script>
+    <script src="js/jquery.slide-transition.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/reloj.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/preguntas.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // $(".opcionPre").click(function () {
+        //   if ($(this).hasClass("pintarOpcioTrivia")) {
+        //     $(this).removeClass("pintarOpcioTrivia");
+        //   } else {
+        //     $(this).addClass("pintarOpcioTrivia");
+        //   }
+        // });
+        $(".opcionPre").on("click touchstart", function (event) {
+          event.preventDefault(); // Evita el comportamiento predeterminado del evento
+
+          if ($(this).hasClass("pintarOpcioTrivia")) {
+            $(this).removeClass("pintarOpcioTrivia");
+          } else {
+            $(this).addClass("pintarOpcioTrivia");
+          }
+        });
+      });
+      $(".boxhelphand1").click(function () {
+        $(".helphand1").hide();
+      });
+    </script>
+  </body>
+</html>

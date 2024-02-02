@@ -1,0 +1,70 @@
+.btn-color {
+    display: inline-block;
+    margin: 1px 2px;
+    cursor: pointer;
+    border-radius: 1px;
+    /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2) */
+}
+
+.pintarimg {
+    cursor: pointer;
+}
+
+.botones {
+    display: inline-block;
+    border: none;
+    margin: 10px 0px;
+}
+
+.botones:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.azul {
+    background-color: #0080ff !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.rojo {
+    background-color: red !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.amarillo {
+    background-color: yellow !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.verde {
+    background-color: green !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.naranja {
+    background-color: #e8641b !important;
+    -webkit-print-color-adjust: exact;
+}
+
+
+/* 
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 btn-instrucion" align="center" style="margin:10px 0px;">
+                        <div class="modal-colores btn-instrucion" style="display:inline-table;background-color:rgba(0, 0, 0, 0.2);padding:10px;text-align: center;border-radius:10px;">
+                            <img src="img/borrador.jpg" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: white;" />
+                            <img src="img/imgcolor.png" id="botepintura" class="btn-color" style="background-color:white;" />
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #f3b715;">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #d793a1;">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #3f99d2;">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #a84a5d;">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #cc9337;">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #cd4155;">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: rgb(209, 27, 27);">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #ebe70b;">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #06ce21;">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #0bac5c;">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #7a28e6;">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #c56e0a;">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: rgb(221, 31, 148);">
+                            <img src="img/gota-color.png" data-anijs="if: click, do: bounceIn animated" class="btn-color" style="background-color: #0a71c5;">
+                        </div>
+                    </div> */
